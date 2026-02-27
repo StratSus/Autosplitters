@@ -401,7 +401,7 @@ init
 			{ "hacker_met", vars.hackermet },
 			{ "fan_breakables", vars.eventExists("BREAKABLE:0x2213a832e590affa") },
 			{ "badending", vars.eventExists("GAME:BAD_ENDING") },
-			{ "goodending", vars.eventExists("GAME:GOOD_ENDING") },
+			{ "goodending", vars.eventExists("GAME:TRUE_ENDING") },
 			
 			{ "nabuu_meet", vars.eventExists("BOSS_MEET:BAMBY") },
 			{ "egis_meet", vars.eventExists("BOSS_MEET:CRABASH") },
