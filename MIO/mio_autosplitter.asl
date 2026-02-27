@@ -272,6 +272,12 @@ startup
 	settings.Add("npc_tan", false, "Tan", "npcsaved");
 	settings.Add("npc_alice", false, "Alice", "npcsaved");
 
+	settings.Add("tremortriggered", true, "---Tremor Triggered---");
+	settings.Add("tremor_intro", false, "Intro Tremor", "tremortriggered");
+	settings.Add("tremor_debby", false, "Pre-Debby Tremor", "tremortriggered");
+	settings.Add("tremor_lategame", false, "Late Game Tremor", "tremortriggered");
+	settings.Add("tremor_metro", false, "Metropolis Tremor", "tremortriggered");
+
 	settings.Add("endingsection", true, "---Endings---");
 	settings.Add("badending", true, "Bad Ending", "endingsection");
 	settings.Add("goodending", true, "Good Ending", "endingsection");
@@ -631,7 +637,12 @@ init
 			{ "npc_sin", vars.sinsaved },
 			{ "npc_cos", vars.cossaved },
 			{ "npc_tan", vars.tansaved },
-			{ "npc_alice", vars.eventExists("REBUILD_NPC:PUPPET_ALICE") }
+			{ "npc_alice", vars.eventExists("REBUILD_NPC:PUPPET_ALICE") },
+
+			{ "tremor_intro", vars.eventExists("HEART_ATTACK:INTRO") },
+			{ "tremor_debby", vars.eventExists("HEART_ATTACK:TUBE") },
+			{ "tremor_lategame", vars.eventExists("HEART_ATTACK:LATE_GAME") },
+			{ "tremor_metro", vars.eventExists("HEART_ATTACK:HORNFELL") }
 
 		};
 		return splits;
